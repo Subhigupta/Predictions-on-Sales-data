@@ -1,0 +1,11 @@
+SQL Queries
+
+1. Top 3 products by revenue per region
+select region, product_id, sum(revenue) as total revenue from sales group by region, product_id order by total_revenue desc
+
+2. Total sales per hour
+select sum(quantity) as total_sales, HOUR(timestamp) as hour from sales group by hour order by hour desc
+
+
+3. Categories with avg price > 5000
+select category, avg(price) AS avg_price from sales group by category having avg(price)>5000
