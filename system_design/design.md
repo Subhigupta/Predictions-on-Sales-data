@@ -1,6 +1,6 @@
 ## System Design
 
-**Simple workflow**:
+**Workflow to productionize ML pipeline**:
 
 Raw Data -> PySpark ETL -> Feature Store -> Model Training -> Model Registry ->  Docker Containerization -> FastAPI  -> Monitoring
 
