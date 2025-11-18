@@ -14615,6 +14615,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;C:\Users\subhi.gupta\Downloads\Case studies\Sales\model_training&quot;</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">feature_engineering</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">train</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14918,7 +14920,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Regression">Regression<a class="anchor-link" href="#Regression">&#182;</a></h2>
+<h2 id="Regression">Regression<a class="anchor-link" href="#Regression">&#182;</a></h2><ul>
+<li>Train Random Forest and Xgboost</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14951,27 +14956,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Fitting Random Forest Regressor....
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\subhi.gupta\AppData\Local\anaconda3\envs\torchenv\lib\site-packages\sklearn\base.py:1474: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples,), for example using ravel().
-  return fit_method(estimator, *args, **kwargs)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Evaluation metric over test dataset....
+Evaluation metric over test dataset....
 R2: 0.33748320069024196
 RMSE: 40084.1682797133
 MAE: 31537.80302708565
@@ -15016,29 +15001,7 @@ MAE: 24732.498079754663
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Fitting XGBoost Regressor....
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\subhi.gupta\AppData\Local\anaconda3\envs\torchenv\lib\site-packages\xgboost\core.py:158: UserWarning: [19:19:44] WARNING: C:\buildkite-agent\builds\buildkite-windows-cpu-autoscaling-group-i-06a9e5273d3715f33-1\xgboost\xgboost-ci-windows\src\learner.cc:740: 
-Parameters: { &#34;min_samples_split&#34; } are not used.
-
-  warnings.warn(smsg, UserWarning)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Evaluation metric over test dataset....
+Evaluation metric over test dataset....
 R2: 0.1563826736724543
 RMSE: 45232.14408200587
 MAE: 34736.47795922526
@@ -15061,7 +15024,10 @@ MAE: 0.026256046404125016
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Classification">Classification<a class="anchor-link" href="#Classification">&#182;</a></h2>
+<h2 id="Classification">Classification<a class="anchor-link" href="#Classification">&#182;</a></h2><ul>
+<li>Train random forest and xgboost</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -15094,27 +15060,7 @@ MAE: 0.026256046404125016
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Fitting Random Forest Classifier....
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\subhi.gupta\AppData\Local\anaconda3\envs\torchenv\lib\site-packages\sklearn\base.py:1474: DataConversionWarning: A column-vector y was passed when a 1d array was expected. Please change the shape of y to (n_samples,), for example using ravel().
-  return fit_method(estimator, *args, **kwargs)
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Evaluation metrics over Test dataset....
+Evaluation metrics over Test dataset....
 Accuracy: 0.5146666666666667
 F1 Score: 0.511192907151987
 
@@ -15207,19 +15153,6 @@ Classification Report:
    macro avg       1.00      1.00      1.00      3500
 weighted avg       1.00      1.00      1.00      3500
 
-</pre>
-</div>
-</div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>C:\Users\subhi.gupta\AppData\Local\anaconda3\envs\torchenv\lib\site-packages\xgboost\core.py:158: UserWarning: [19:19:45] WARNING: C:\buildkite-agent\builds\buildkite-windows-cpu-autoscaling-group-i-06a9e5273d3715f33-1\xgboost\xgboost-ci-windows\src\learner.cc:740: 
-Parameters: { &#34;min_samples_split&#34; } are not used.
-
-  warnings.warn(smsg, UserWarning)
 </pre>
 </div>
 </div>
